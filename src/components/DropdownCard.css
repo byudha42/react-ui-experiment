@@ -1,0 +1,130 @@
+.dropdown-card {
+  background: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #EEEEEE;
+  box-shadow: 
+    0 8px 15px 0 rgba(20, 20, 20, 0.12),
+    0 0 4px 0 rgba(20, 20, 20, 0.10);
+  padding: 10px 15px 20px 15px;
+  width: calc(578px - 104px - 104px);
+  position: absolute;
+  top: 85px;
+  left: 104px;
+  right: 104px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.dropdown-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.dropdown-separator {
+  height: 1px;
+  background-color: #EEEEEE;
+  margin: 10px 0;
+}
+
+.dropdown-item {
+  margin: 0;
+  height: 36px;
+  padding: 0;
+}
+
+.dropdown-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.dropdown-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 8px 0;
+  user-select: none;
+}
+
+.dropdown-text {
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  font-weight: 400;
+}
+
+/* Hide native checkbox */
+.dropdown-checkbox-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+}
+
+/* Custom checkbox styling */
+.dropdown-checkbox-custom {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 23px;
+  height: 23px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #ffffff;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+/* Checked state */
+.dropdown-checkbox-input:checked + .dropdown-checkbox-custom {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+/* Hover state */
+.dropdown-label:hover .dropdown-checkbox-custom {
+  border-color: #9ca3af;
+}
+
+.dropdown-checkbox-input:checked + .dropdown-checkbox-custom:hover {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+/* Checkmark SVG */
+.checkbox-checkmark {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+/* Done button */
+.dropdown-done-button {
+  width: 100%;
+  height: 40px;
+  background-color: #fbbf24;
+  border: none;
+  border-radius: 6px;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color 0.2s ease;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.dropdown-done-button:hover {
+  background-color: #f59e0b;
+}
+
+.dropdown-done-button:active {
+  background-color: #d97706;
+}
+
