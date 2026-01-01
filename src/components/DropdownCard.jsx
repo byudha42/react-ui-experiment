@@ -33,10 +33,35 @@ const DropdownCard = () => {
         };
       }
       
-      return {
+      // If unchecking a page and all-pages is checked, also uncheck all-pages
+      if (!newValue && prev['all-pages']) {
+        return {
+          ...prev,
+          [id]: newValue,
+          'all-pages': false,
+        };
+      }
+      
+      // Update the page state
+      const updatedState = {
         ...prev,
         [id]: newValue,
       };
+      
+      // If checking a page, check if all pages are now checked, then check all-pages
+      if (newValue) {
+        const allPagesChecked = 
+          updatedState['page-1'] && 
+          updatedState['page-2'] && 
+          updatedState['page-3'] && 
+          updatedState['page-4'];
+        
+        if (allPagesChecked) {
+          updatedState['all-pages'] = true;
+        }
+      }
+      
+      return updatedState;
     });
   };
 
