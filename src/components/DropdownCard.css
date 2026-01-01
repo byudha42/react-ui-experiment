@@ -128,3 +128,14 @@
   background-color: #d97706;
 }
 
+/* Mobile responsive styles - screens under 425px */
+@media (max-width: 425.99px) {
+  .dropdown-card {
+    position: relative;
+    left: 0;
+    right: 0;
+    width: calc(100% - 32px);
+    margin: 0 auto;
+  }
+}
+
